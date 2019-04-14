@@ -15,16 +15,16 @@ function ShowQuestion(props){
     <div>
       <par>{q}</par>
       <br />
-      <input type="text" name={j}></input>
+      <input type="text" name={j} required></input>
     </div> );
   }else if(t===2){
     return(
       <div>
         <par>{q}</par>
         <br />
-      <label>True <input type="radio" name={j} value="True" ></input></label>
+      <label>True <input type="radio" name={j} value="True" required></input></label>
       <br/>
-      <label>False <input type="radio" name={j} value="False" ></input></label>
+      <label>False <input type="radio" name={j} value="False" required></input></label>
       </div>
     );
   }
@@ -32,11 +32,11 @@ function ShowQuestion(props){
     <div>
       <par>{q}</par>
       <br/>
-      <label>{o0} <input type="radio" name={j} value={o0} ></input></label>
+      <label>{o0} <input type="radio" name={j} value={o0} required></input></label>
       <br/>
-      <label>{o1} <input type="radio" name={j} value={o1} ></input></label>
+      <label>{o1} <input type="radio" name={j} value={o1} required></input></label>
       <br/>
-      <label>{o2} <input type="radio" name={j} value={o2} ></input></label>
+      <label>{o2} <input type="radio" name={j} value={o2} required></input></label>
     </div>
   ); 
 }
@@ -269,7 +269,7 @@ class Showchallenge extends Component {
       }
       this.level = new_level;
       this.setState({
-        show_dashboard : true
+        showdashboard : true
       });
     }
 

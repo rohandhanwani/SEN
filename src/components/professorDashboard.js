@@ -58,6 +58,10 @@ class ProfessorDashboard extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        if(parseInt(event.target[0].value)>14){
+            alert('Please enter a level between 1 to 14');
+            return ;
+        }
         this.setState({
             level : parseInt(event.target[0].value)
         });
@@ -87,9 +91,9 @@ class ProfessorDashboard extends Component {
             return (<Leaderboard id={this.id} challengeNumber={this.state.challengeNumber} level={this.state.levelNumber}/>);
         }else if(this.state.showLeaderboard === true){
             return (<form onSubmit={this.handleSubmitthree}>
-                    <label>Enter the level at which you want to see leaderboard : <input type="text"></input></label>
+                    <label>Enter the level at which you want to see leaderboard : <input type="text" required></input></label>
                     <br />
-                    <label>Enter the challenge number you want to see leaderboard : <input type="text"></input></label>
+                    <label>Enter the challenge number you want to see leaderboard : <input type="text" required></input></label>
                     <br />
                     <label>Show<input type="submit" value="Submit" /></label>
                  </form>
@@ -115,7 +119,7 @@ class ProfessorDashboard extends Component {
                 </ul>
        
                 <form onSubmit={this.handleSubmit}>
-                    <label>Enter the level to which you want to add the challenge : <input type="text"></input></label>
+                    <label>Enter the level to which you want to add the challenge : <input type="text" required></input></label>
                     <br />
                     <label>Add<input type="submit" value="Submit" /></label>
                 </form>
@@ -124,9 +128,9 @@ class ProfessorDashboard extends Component {
        }else if(this.state.show_edit_challenge === true){
             return (
                 <form onSubmit={this.handleSubmittwo}>
-                    <label>Enter the level at which you want to edit the challenge : <input type="text"></input></label>
+                    <label>Enter the level at which you want to edit the challenge : <input type="text" required></input></label>
                     <br />
-                    <label>Enter the challenge number you want to edit the challenge : <input type="text"></input></label>
+                    <label>Enter the challenge number you want to edit the challenge : <input type="text" required></input></label>
                     <br />
                     <label>Edit<input type="submit" value="Submit" /></label>
                 </form>

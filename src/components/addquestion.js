@@ -5,13 +5,13 @@ function Showques(props){
   const j = props.j;
   return (
     <div>
-  <label>Question {j}<input type="text" name="question1" ></input></label>
+  <label>Question {j}<input type="text" name="question1" required></input></label>
   <hr />
-  <label>Answer {j}<input type="text" name="question1" ></input></label>
+  <label>Answer {j}<input type="text" name="question1" required></input></label>
   <hr />
-  <label>Option 1<input type="text" name="question1" ></input></label>
-  <label>Option 2<input type="text" name="question1" ></input></label>
-  <label>Option 3<input type="text" name="question1" ></input></label>
+  <label>Option 1<input type="text" name="question1" required></input></label>
+  <label>Option 2<input type="text" name="question1" required></input></label>
+  <label>Option 3<input type="text" name="question1" required></input></label>
   <hr /> 
   </div>
   );
